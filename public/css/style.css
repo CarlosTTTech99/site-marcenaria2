@@ -103,13 +103,14 @@ section[id] { scroll-margin-top: 72px; }
 .round:active { transform: scale(.94); }
 
 /* Cabeçalho */
-.nav { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color 250ms ease, box-shadow 250ms ease; }
-.nav__in { max-width: 1440px; margin: 0 auto; padding: 14px var(--gutter); display: flex; align-items: center; gap: 32px; }
-.nav.is-scrolled {
+.nav {
+  position: fixed; inset: 0 0 auto; z-index: 50;
   background: color-mix(in srgb, var(--bg) 82%, transparent);
   -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px);
-  box-shadow: 0 1px 0 var(--line);
+  transition: box-shadow 250ms ease;
 }
+.nav__in { max-width: 1440px; margin: 0 auto; padding: 14px var(--gutter); display: flex; align-items: center; gap: 32px; }
+.nav.is-scrolled { box-shadow: 0 1px 0 var(--line); }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand__mark {
   display: grid; place-items: center; width: 38px; height: 38px;
